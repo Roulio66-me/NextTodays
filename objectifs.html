@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Objectifs - NextTOdays</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="animated-background">
+    <div class="special-navbar">
+        <a href="profil.html" class="back-button"><i class="fas fa-arrow-left"></i> Retour</a>
+    </div>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="profil.html">Profil</a><span>&gt;</span><span>Mes objectifs</span>
+        </div>
+        <section class="objectifs-section section">
+            <h1>Mes Objectifs</h1>
+            <p class="section-subtitle">Gérez vos objectifs personnels et trouvez les programmes qui vous conviennent le mieux.</p>
+
+            <div class="objectifs-container">
+                <div class="profile-card add-objectif-card">
+                    <h3>Ajouter un nouvel objectif</h3>
+                    <form id="add-objectif-form">
+                        <div class="form-group">
+                            <label for="objectif-name">Nom de l'objectif</label>
+                            <input type="text" id="objectif-name" placeholder="Ex: Perdre 5 kg" required>
+                        </div>
+                        <button type="submit" class="button">Ajouter l'objectif</button>
+                    </form>
+                </div>
+                <div class="profile-card current-objectifs-card">
+                    <h3>Mes objectifs actuels</h3>
+                    <ul id="objectifs-list">
+                        </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>

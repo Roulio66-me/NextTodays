@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gérer l'Abonnement - NextTOdays</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="animated-background">
+    <div class="special-navbar">
+        <a href="profil.html" class="back-button"><i class="fas fa-arrow-left"></i> Retour</a>
+    </div>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="profil.html">Profil</a><span>&gt;</span><span>Abonnement</span>
+        </div>
+        <section class="abonnement-section section">
+            <h1>Gérer mon Abonnement</h1>
+            <p class="section-subtitle">Affichez les détails de votre abonnement, modifiez votre forfait ou consultez votre historique de facturation.</p>
+
+            <div class="subscription-status-card profile-card">
+                <h3>Abonnement Actuel</h3>
+                <div class="status-info">
+                    <p class="current-plan" id="current-plan">Plan **Gratuit**</p>
+                    <p class="renewal-date" id="renewal-date">Renouvellement le : N/A</p>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <h3>Changer de plan</h3>
+                <p class="section-subtitle">Passez à un plan supérieur pour accéder à plus de fonctionnalités.</p>
+                <ul class="plan-list">
+                    <li>
+                        <p>Plan Starter</p>
+                        <p class="plan-details">Accès illimité à tous les programmes.</p>
+                        <a href="#" class="button plan-button" id="plan-starter-btn">Passer au Starter (9,99 €/mois)</a>
+                    </li>
+                    <li>
+                        <p>Plan Premium</p>
+                        <p class="plan-details">Accès illimité à tous les programmes.</p>
+                        <a href="#" class="button plan-button" id="plan-premium-btn">Passer au Premium (14,99 €/mois)</a>
+                    </li>
+                    <li>
+                        <p>Plan Annuel</p>
+                        <p class="plan-details">Plan Premium avec une remise.</p>
+                        <a href="#" class="button plan-button" id="plan-annual-btn">Passer à l'annuel (129,99 €/an)</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="profile-card">
+                <h3>Historique de Facturation</h3>
+                <ul class="billing-history">
+                    <li>
+                        <p>Facture de septembre 2025</p>
+                        <a href="#" class="download-link">Télécharger</a>
+                    </li>
+                    <li>
+                        <p>Facture d'août 2025</p>
+                        <a href="#" class="download-link">Télécharger</a>
+                    </li>
+                    <li>
+                        <p>Facture de juillet 2025</p>
+                        <a href="#" class="download-link">Télécharger</a>
+                    </li>
+                </ul>
+                <a href="#" class="history-link">Voir toutes les factures</a>
+            </div>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>

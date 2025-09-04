@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil - NextTOdays</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="animated-background">
+    <div class="navbar-container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">NextTOdays</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="animated-link">Accueil</a></li>
+                <li><a href="programmes.html" class="animated-link">Programmes</a></li>
+                <li><a href="tarifs.html" class="animated-link">Tarifs</a></li>
+                <li><a href="blog.html" class="animated-link">Blog</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="contact.html" class="contact-btn">Contact</a>
+                <a href="profil.html" class="profile-btn"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </nav>
+    </div>
+<br>
+    <main class="container">
+        <section class="profile-section section">
+            <div class="profile-main-header">
+                <div class="profile-avatar"><i class="fas fa-user-circle"></i></div>
+                <div class="profile-info-main">
+                    <h2>Nom de l'utilisateur</h2>
+                    <p class="profile-since">Membre depuis le 1er janvier 2025</p>
+                </div>
+                <div class="profile-actions">
+                    <a href="modifier-profil.html" class="button small-button">Modifier le profil</a>
+                    <a href="deconnexion.html" class="button small-button secondary-button">Déconnexion</a>
+                </div>
+            </div>
+
+            <div class="profile-links-grid">
+                <div class="profile-card">
+                    <h3>Mon Abonnement</h3>
+                    <ul class="profile-links-list">
+                        <li><a href="abonnement.html"><i class="fas fa-credit-card"></i> Gérer l'abonnement</a></li>
+                    </ul>
+                </div>
+                <div class="profile-card">
+                    <h3>Mes Programmes</h3>
+                    <ul class="profile-links-list">
+                        <li><a href="mes-programmes-en-cours.html"><i class="fas fa-list-ul"></i> Programmes en cours</a></li>
+                        <li><a href="programmes.html"><i class="fas fa-search"></i> Découvrir d'autres programmes</a></li>
+                    </ul>
+                </div>
+                <div class="profile-card">
+                    <h3>Mes Objectifs</h3>
+                    <ul id="profile-goals-list" class="profile-links-list">
+                    </ul>
+                    <a href="objectifs.html" class="all-achievements-link">Gérer mes objectifs</a>
+                </div>
+                <div class="profile-card">
+                    <h3>Mes Réalisations</h3>
+                    <ul class="profile-links-list">
+                        <li><a href="realisations.html"><i class="fas fa-trophy"></i> Voir tous mes badges</a></li>
+                    </ul>
+                </div>
+                <div class="profile-card">
+                    <h3>Paramètres</h3>
+                    <ul class="profile-links-list">
+                        <li><a href="confidentialite.html"><i class="fas fa-lock"></i> Confidentialité</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Nous contacter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>

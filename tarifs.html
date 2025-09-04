@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Tarifs - NextTodays</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="animated-background">
+    <div class="navbar-container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">NextTodays</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="animated-link">Accueil</a></li>
+                <li><a href="programmes.html" class="animated-link">Programmes</a></li>
+                <li><a href="tarifs.html" class="animated-link">Tarifs</a></li>
+                <li><a href="blog.html" class="animated-link">Blog</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="contact.html" class="contact-btn">Contact</a>
+                <a href="profil.html" class="profile-btn"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </nav>
+    </div>
+<br>
+    <main class="container">
+        <section class="section animated-section">
+            <h1>Tarifs</h1>
+            <p class="section-subtitle">Trouvez l'offre qui vous convient le mieux, sans engagement.</p>
+            
+            <div class="price-selector">
+                <button class="selector-btn active" data-period="mensuel">Mensuel</button>
+                <button class="selector-btn" data-period="annuel">Annuel</button>
+            </div>
+            <br>
+            
+            <div class="pricing-section">
+                <div class="price-card animated-card" data-plan="free" data-price-mensuel="0€" data-price-annuel="0€">
+                    <img src="images/pricing-free.jpg" alt="Icône Plan Free" class="price-image">
+                    <h3>FREE</h3>
+                    <p class="subtitle">Idéal pour apprendre à utiliser NextTodays</p>
+                    <p class="price">
+                        <span class="price-value">0€</span> <span class="price-period"></span>
+                    </p>
+                    <a href="#" class="button plan-button" id="plan-free-btn">Commencer</a>
+                    <ul>
+                        <li>Accès à 5 programmes</li>
+                        <li>Tableau de bord de base</li>
+                        <li>Support par email</li>
+                        <li>Aucun engagement</li>
+                    </ul>
+                </div>
+
+                <div class="price-card animated-card highlighted-card featured-card" data-plan="starter" data-price-mensuel="9,99€" data-price-annuel="89,99€">
+                    <img src="images/pricing-starter.jpg" alt="Icône Plan Starter" class="price-image">
+                    <h3>STARTER</h3>
+                    <p class="subtitle">Pour débloquer votre potentiel</p>
+                    <p class="price">
+                        <span class="price-value">9,99€</span> <span class="price-period">/ mois</span>
+                    </p>
+                    <a href="#" class="button plan-button" id="plan-starter-btn">Commencer gratuitement</a>
+                    <ul>
+                        <li>Accès illimité à tous les programmes</li>
+                        <li>Support prioritaire</li>
+                        <li>Suivi des progrès avancé</li>
+                        <li>Statistiques de performance</li>
+                    </ul>
+                </div>
+
+                <div class="price-card animated-card highlighted-card" data-plan="premium" data-price-mensuel="14,99€" data-price-annuel="129,99€">
+                    <img src="images/pricing-premium.jpg" alt="Icône Plan Premium" class="price-image">
+                    <h3>PREMIUM</h3>
+                    <p class="subtitle">L'expérience complète</p>
+                    <p class="price">
+                        <span class="price-value">14,99€</span> <span class="price-period">/ mois</span>
+                    </p>
+                    <a href="#" class="button plan-button" id="plan-premium-btn">Commencer gratuitement</a>
+                    <ul>
+                        <li>Toutes les fonctionnalités du plan Starter</li>
+                        <li>Coaching personnalisé</li>
+                        <li>Accès aux événements exclusifs</li>
+                        <li>Intégration avec d'autres applications</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pricing-info-section">
+                <p>Besoin d'aide pour choisir votre plan ? <a href="contact.html" style="color:var(--accent-blue); text-decoration:none;">Contactez-nous</a> !</p>
+            </div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

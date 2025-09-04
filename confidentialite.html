@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres de Confidentialité - NextTOdays</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="animated-background">
+    <div class="special-navbar">
+        <a href="profil.html" class="back-button"><i class="fas fa-arrow-left"></i> Retour</a>
+    </div>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="profil.html">Profil</a><span>&gt;</span><span>Confidentialité</span>
+        </div>
+        <section class="confidentialite-section section">
+            <h1>Paramètres de Confidentialité</h1>
+            <p class="section-subtitle">Gérez qui peut voir vos informations et vos préférences de communication.</p>
+
+            <div class="confidentialite-grid">
+                <div class="profile-card">
+                    <h3>Visibilité du profil</h3>
+                    <form class="confidentialite-form">
+                        <ul class="settings-list">
+                            <li>
+                                <p>Qui peut voir mon profil ?</p>
+                                <div class="setting-control">
+                                    <select id="profile-visibility">
+                                        <option value="public">Tout le monde</option>
+                                        <option value="friends">Mes amis</option>
+                                        <option value="private">Personne</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Qui peut m'envoyer des messages ?</p>
+                                <div class="setting-control">
+                                    <select id="message-privacy">
+                                        <option value="everyone">Tout le monde</option>
+                                        <option value="friends">Mes amis</option>
+                                        <option value="none">Personne</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                
+                <div class="profile-card">
+                    <h3>Préférences de communication</h3>
+                    <form class="confidentialite-form">
+                        <ul class="settings-list">
+                            <li>
+                                <p>Recevoir les notifications par email</p>
+                                <div class="setting-control">
+                                    <label class="switch">
+                                        <input type="checkbox" id="email-notifications">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Autoriser les messages de la communauté</p>
+                                <div class="setting-control">
+                                    <label class="switch">
+                                        <input type="checkbox" id="community-messages">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                
+                <div class="profile-card full-width">
+                    <h3>Gestion des données</h3>
+                    <ul class="settings-list">
+                        <li>
+                            <p>Télécharger mes données</p>
+                            <div class="setting-control">
+                                <button id="download-data-btn" class="button small-button">Télécharger</button>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Supprimer mon compte</p>
+                            <div class="setting-control">
+                                <button id="delete-account-btn" class="button small-button delete-button">Supprimer</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
