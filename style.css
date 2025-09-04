@@ -7,7 +7,7 @@
     --text-color: #293241;
     --light-gray: #f0f4f7;
     --dark-blue: #1b263b;
-    --accent-blue: #4a7599;
+    --accent-blue: #4a7599; /* C'est la couleur bleue que nous allons utiliser pour le fond */
     --card-background: #ffffff;
     --accent-orange: #FF6B6B;
     --link-color: var(--dark-blue);
@@ -22,10 +22,16 @@
 }
 
 body {
-    background-color:var(--primary-blue);
-    color:var(--text-color);
-    line-height:1.6;
-    overflow-x:hidden;
+    background-color: var(--primary-blue);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: radial-gradient(
+      circle at center,
+      #ffffff 0%,
+      #e8f4f9 100%
+    );
+    min-height: 100vh;
 }
 
 a {
@@ -91,7 +97,7 @@ p {
     position:absolute;
     top:20px;
     z-index:1000;
-    width:calc(100% - 40px);
+    width:calc(100% - 180px);
     max-width:1200px;
     left:50%;
     transform:translateX(-50%);
@@ -107,7 +113,7 @@ p {
     position:sticky;
     top:20px;
     z-index:1000;
-    max-width:90%;
+    max-width:60%;
     margin:0 auto;
     border-radius:50px;
     background-color:rgba(255,255,255,0.9);
@@ -125,10 +131,10 @@ p {
 }
 
 .navbar {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
 }
 
 .logo {
@@ -178,7 +184,7 @@ p {
 .contact-btn {
     background-color:var(--accent-blue);
     color:white;
-    padding:10px 20px;
+    padding:12px 20px;
     border-radius:50px;
     transition:background-color 0.3s ease;
 }
@@ -189,12 +195,27 @@ p {
 
 .profile-btn {
     font-size:1.5rem;
-    color:var(--text-color);
-    transition:color 0.3s ease;
+    color: white; /* L'icône de personnage est blanche */
+    transition:color 0.3s ease, background-color 0.3s ease;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--accent-blue); /* Le fond du cercle est bleu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.profile-btn i {
+    position: relative;
+    top: 0px; /* Remonte l'icône de 2px */
 }
 
 .profile-btn:hover {
-    color:var(--accent-blue);
+    color: var(--light-gray); /* L'icône devient plus claire au survol */
+    background-color: var(--dark-blue); /* Le fond devient plus foncé au survol */
 }
 
 .back-button {
@@ -229,7 +250,7 @@ p {
 
 .button {
     display:inline-block;
-    padding:15px 30px; /* Agrandir le padding pour un bouton plus grand */
+    padding:15px 30px;
     background-color:var(--accent-blue);
     color:white;
     border-radius:50px;
@@ -239,20 +260,20 @@ p {
     border:none;
     cursor:pointer;
     box-shadow:0 4px 10px rgba(74,117,153,0.2);
-    position: relative; /* Pour positionner la flèche */
-    overflow: hidden; /* Cache la flèche en dehors au repos */
-    padding-right: 45px; /* Espace pour la flèche */
+    position: relative;
+    overflow: hidden;
+    padding-right: 45px;
 }
 
 .button::after {
-    content: '\f061'; /* Code Unicode pour l'icône de flèche droite de Font Awesome */
-    font-family: 'Font Awesome 6 Free'; /* Utilise la police Font Awesome */
-    font-weight: 900; /* Poids pour les icônes solid */
+    content: '\f061';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
     position: absolute;
-    right: 15px; /* Position initiale de la flèche */
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    opacity: 0; /* Cache la flèche par défaut */
+    opacity: 0;
     transition: right 0.3s ease, opacity 0.3s ease;
 }
 
@@ -263,8 +284,8 @@ p {
 }
 
 .button:hover::after {
-    right: 20px; /* Déplace la flèche vers la droite au survol */
-    opacity: 1; /* Rends la flèche visible au survol */
+    right: 20px;
+    opacity: 1;
 }
 
 .small-button {
@@ -341,9 +362,9 @@ input:focus,textarea:focus,select:focus {
 .hero-container {
     position: relative;
     width: 100%;
-    height: 110vh; /* Augmente la hauteur pour couvrir plus d'écran */
+    height: 110vh;
     overflow: hidden;
-    margin-top: -20px; /* Remonte légèrement pour se coller au bord haut */
+    margin-top: -20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -363,10 +384,9 @@ input:focus,textarea:focus,select:focus {
 
 .hero-content {
     position: relative;
-    z-index: 1; /* Assure que le contenu est au-dessus de l'image */
-    color: white; /* Couleur du texte par défaut pour le contenu du hero */
+    z-index: 1;
+    color: white;
     padding: 0 20px;
-    /* Ajout d'un léger dégradé sombre pour améliorer la lisibilité du texte sur l'image */
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
     width: 100%;
     height: 100%;
@@ -378,27 +398,26 @@ input:focus,textarea:focus,select:focus {
 
 .hero-title {
     font-family: 'Inter', sans-serif;
-    font-size: 4rem; /* Augmenter la taille pour plus d'impact */
-    font-weight: 900; /* Extra gras */
-    color: #FFFFFF; /* Blanc pur pour le titre */
+    font-size: 4rem;
+    font-weight: 900;
+    color: #FFFFFF;
     text-align: center;
-    /* Ombre plus prononcée et douce */
     text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3);
-    margin-bottom: 1.5rem; /* Augmenter l'espace en dessous */
-    line-height: 1.1; /* Espacement de ligne plus serré */
-    letter-spacing: -1px; /* Légèrement plus serré pour la lecture */
-    animation: fadeInScale 1.5s ease-out; /* Animation d'apparition */
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    animation: fadeInScale 1.5s ease-out;
 }
 
 .hero-subtitle {
-    font-size: 1.3rem; /* Légèrement plus grande */
-    max-width: 700px; /* Largeur maximale augmentée */
-    margin: 0 auto 2.5rem; /* Marge automatique pour centrer, plus d'espace en dessous */
-    color: rgba(255, 255, 255, 0.9); /* Blanc légèrement transparent */
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
     text-align: center;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); /* Ombre douce */
-    font-weight: 500; /* Poids de police moyen */
-    animation: fadeIn 2s ease-out; /* Animation d'apparition plus lente */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    font-weight: 500;
+    animation: fadeIn 2s ease-out;
 }
 
 @keyframes fadeInScale {
@@ -416,7 +435,7 @@ input:focus,textarea:focus,select:focus {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    animation: fadeInUp 2.5s ease-out; /* Animation d'apparition par le bas */
+    animation: fadeInUp 2.5s ease-out;
 }
 
 @keyframes fadeInUp {
@@ -499,7 +518,7 @@ input:focus,textarea:focus,select:focus {
 
 .program-card:hover {
     transform:translateY(-5px);
-    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    box-shadow:0 8s;
 }
 
 .program-image {
@@ -689,11 +708,11 @@ input:focus,textarea:focus,select:focus {
 }
 
 .price-card .price-value {
-    font-size:3rem; /* Légèrement augmenté */
+    font-size:3rem;
 }
 
 .price-card .price-period {
-    font-size:1.3rem; /* Légèrement augmenté */
+    font-size:1.3rem;
     font-weight:400;
     color:var(--text-color);
 }
@@ -1004,11 +1023,16 @@ input:checked+.slider:before {
 }
 
 .avatar-upload {
-    text-align:center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .avatar-upload .profile-avatar {
-    margin:0 auto 10px;
+    margin: 0 auto 15px;
 }
 
 .edit-profile-form .button {
@@ -1203,6 +1227,8 @@ input:checked+.slider:before {
 
 .resource-card h3 {
     font-size:1.2rem;
+    color:var(--dark-blue);
+    margin-bottom:10px;
 }
 
 .resource-card p {
@@ -1292,9 +1318,9 @@ input:checked+.slider:before {
         padding:20px;
     }
     .hero-title {
-        font-size: 2.8rem; /* Plus petit sur mobile */
+        font-size: 2.8rem;
     }
     .hero-subtitle {
-        font-size: 1.1rem; /* Plus petit sur mobile */
+        font-size: 1.1rem;
     }
 }
